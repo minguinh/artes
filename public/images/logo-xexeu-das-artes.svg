@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 140" role="img" aria-labelledby="title">
+  <title id="title">Xexéu das Artes — marca em fios de crochê</title>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="67" cy="71" r="43" fill="#c84f83" stroke="#8d315b" stroke-width="5"/>
+    <path d="M32 61c24-21 55-19 76 2M27 78c26-16 59-12 81 5M42 37c9 19 30 31 61 34M38 99c18-11 40-10 57 0M78 31c-17 22-23 47-14 82M97 43C77 66 76 85 84 108" stroke="#ffe4ee" stroke-width="5"/>
+    <path d="M105 96c16 3 25 15 18 29" stroke="#c84f83" stroke-width="6"/>
+  </g>
+  <g font-family="'Baloo 2','Arial Rounded MT Bold',sans-serif" font-size="72" font-weight="700" letter-spacing="-2">
+    <text x="127" y="93" fill="#c84f83" stroke="#8d315b" stroke-width="4" paint-order="stroke">Xexéu das Artes</text>
+    <text x="127" y="93" fill="none" stroke="#ffe4ee" stroke-width="3" stroke-dasharray="1 10" stroke-linecap="round">Xexéu das Artes</text>
+  </g>
+</svg>

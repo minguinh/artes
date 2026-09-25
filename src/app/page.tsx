@@ -4,6 +4,58 @@ import { publicArtisans, publicProducts } from '@/lib/catalog';
 import { photoUrl } from '@/lib/types';
 import ProductCarousel from '@/components/product-carousel';
 
-export const dynamic='force-dynamic';
-export default async function Home() { const [artisans,products]=await Promise.all([publicArtisans(),publicProducts()]); const featured=artisans.find(a=>a.featured_month===new Date().toISOString().slice(0,7)+'-01'); const groups=artisans.map(a=>({artisan:a,products:products.filter(p=>p.artisan_id===a.id)})).filter(g=>g.products.length); return <><section className="hero"><div className="hero-copy"><span className="eyebrow">✦ Feito com alma em Pernambuco</span><h1>Histórias que se <em>fazem à mão.</em></h1><p>Conheça o talento das artesãs de Xexéu. Peças únicas, criadas com cuidado e saberes que passam de geração em geração.</p><Link className="button" href="/produtos">Descubra nossas peças <span>↗</span></Link></div><div className="hero-visual"><div className="hero-pot"/><div className="hero-badge"><small>ARTE QUE TRANSFORMA</small>Das mãos de Xexéu para o seu lar.</div><span className="hero-side">Pernambuco · Brasil</span></div></section><div className="trust-row"><div><strong>Feito à mão, com afeto</strong><span>Cada peça guarda uma história</span></div><div><strong>Direto de quem cria</strong><span>Conheça a artesã por trás da obra</span></div><div><strong>Arte de Xexéu para você</strong><span>Apoie o talento da nossa terra</span></div></div><section className="section"><div className="section-head"><div><span className="eyebrow">Escolhidas com carinho</span><h2>Peças para se encantar</h2></div><Link className="text-link" href="/produtos">Ver todas as peças ↗</Link></div>{products.length?<div className="cards">{products.slice(0,4).map(p=><ProductCard key={p.id} product={p}/>)}</div>:<div className="empty">As primeiras peças aparecerão aqui após a aprovação pela equipe.</div>}</section><section className="category-strip"><h2>Encontre a arte que combina com você.</h2><div className="category-links">{['Cerâmica','Bordado','Tecelagem','Madeira','Acessórios'].map(c=><Link href={`/produtos?categoria=${encodeURIComponent(c)}`} key={c}>{c}</Link>)}</div></section><section className="feature"><div className="feature-art">{featured?.photo_path?<img src={photoUrl(featured.photo_path)!} alt={featured.name}/>: '✳'}</div><div className="feature-copy"><span className="eyebrow">✦ Artesã do mês</span><h2>{featured?featured.name:'Um espaço para celebrar quem cria'}</h2><p>{featured?featured.story:'A cada mês, uma artesã de Xexéu será apresentada aqui. Sua trajetória e suas peças merecem ser conhecidas.'}</p><Link className="button button-outline" href={featured?`/artesas/${featured.slug}`:'/artesas'}>{featured?'Conheça sua história':'Conheça as artesãs'} ↗</Link></div></section>{groups.map(g=><section className="section" key={g.artisan.id}><div className="section-head"><div><span className="eyebrow">Feito por {g.artisan.name}</span><h2>Criações de {g.artisan.name}</h2></div><Link className="text-link" href={`/artesas/${g.artisan.slug}`}>Ver catálogo ↗</Link></div><ProductCarousel products={g.products} label={`Criações de ${g.artisan.name}`}/></section>)}<section className="section"><div className="section-head"><div><span className="eyebrow">As mãos por trás da arte</span><h2>Conheça nossas artesãs</h2></div><Link className="text-link" href="/artesas">Ver todas ↗</Link></div>{artisans.length?<div className="artisan-grid">{artisans.slice(0,3).map(a=><ArtisanCard artisan={a} key={a.id}/>)}</div>:<div className="empty">As artesãs aprovadas aparecerão aqui em breve.</div>}</section><section className="story-band" id="historia"><h2>Quando você escolhe uma peça artesanal, leva consigo um pedacinho de Xexéu.</h2><Link className="button button-outline" href="/artesas">Conheça as histórias ↗</Link></section></> }
+export const dynamic = 'force-dynamic';
 
+export default async function Home() {
+  const [artisans, products] = await Promise.all([publicArtisans(), publicProducts()]);
+  const featured = artisans.find(a => a.featured_month === new Date().toISOString().slice(0, 7) + '-01');
+  const groups = artisans
+    .map(artisan => ({ artisan, products: products.filter(p => p.artisan_id === artisan.id) }))
+    .filter(group => group.products.length);
+
+  return <>
+    <section className="hero">
+      <div className="hero-copy">
+        <span className="eyebrow">Feito à mão em Xexéu, Pernambuco</span>
+        <h1>Cada peça tem uma história. <em>Aqui ela encontra você.</em></h1>
+        <p>Conheça as artesãs de Xexéu e descubra o carinho presente em cada criação. Se você produz artesanato na cidade, pode mostrar seu trabalho gratuitamente nesta fase.</p>
+        <div className="hero-actions">
+          <Link className="button" href="/artesas">Conhecer as artesãs ↗</Link>
+          <Link className="button button-outline" href="/cadastro">Criar perfil grátis</Link>
+        </div>
+        <p className="hero-note">Cadastro e divulgação gratuitos por enquanto. Compras online em preparação.</p>
+      </div>
+      <div className="hero-visual">
+        <div className="hero-yarn hero-yarn-one" aria-hidden="true" />
+        <div className="hero-yarn hero-yarn-two" aria-hidden="true" />
+        <img className="hero-mascot" src="/images/mascote-vovo-tricotando.png" alt="Mascote ilustrada: uma vovó sorridente tricotando uma peça rosa" />
+        <div className="hero-badge"><small>BOAS-VINDAS DA NOSSA MASCOTE</small>Uma rede de histórias feita à mão.</div>
+        <span className="hero-side">Xexéu · Pernambuco</span>
+      </div>
+    </section>
+
+    <div className="trust-row">
+      <div><strong>Feito por mãos de Xexéu</strong><span>Conheça quem cria cada peça</span></div>
+      <div><strong>Histórias junto com as peças</strong><span>O trabalho tem nome, técnica e trajetória</span></div>
+      <div><strong>Espaço gratuito nesta fase</strong><span>Artesãs podem divulgar seu trabalho sem custo</span></div>
+    </div>
+
+    <section className="section">
+      <div className="section-head"><div><span className="eyebrow">Feitas com cuidado</span><h2>Peças para conhecer</h2></div><Link className="text-link" href="/produtos">Ver todas as peças ↗</Link></div>
+      {products.length ? <div className="cards">{products.slice(0, 4).map(product => <ProductCard key={product.id} product={product} />)}</div> : <div className="empty">As primeiras peças aparecerão aqui após a aprovação pela equipe.</div>}
+    </section>
+
+    <section className="category-strip"><h2>Encontre o artesanato que combina com você.</h2><div className="category-links">{['Cerâmica', 'Bordado', 'Tecelagem', 'Madeira', 'Acessórios'].map(category => <Link href={'/produtos?categoria=' + encodeURIComponent(category)} key={category}>{category}</Link>)}</div></section>
+
+    <section className="feature">
+      <div className="feature-art">{featured?.photo_path ? <img src={photoUrl(featured.photo_path)!} alt={featured.name} /> : <span aria-hidden="true">✿</span>}</div>
+      <div className="feature-copy"><span className="eyebrow">Artesã do mês</span><h2>{featured ? featured.name : 'Em breve, uma história para conhecer de perto'}</h2><p>{featured ? featured.story : 'A cada mês, vamos destacar uma artesã de Xexéu, sua trajetória e o trabalho que ela faz com as próprias mãos.'}</p><Link className="button button-outline" href={featured ? '/artesas/' + featured.slug : '/artesas'}>{featured ? 'Conhecer sua história' : 'Conhecer as artesãs'} ↗</Link></div>
+    </section>
+
+    {groups.map(group => <section className="section" key={group.artisan.id}><div className="section-head"><div><span className="eyebrow">Feito por {group.artisan.name}</span><h2>Criações de {group.artisan.name}</h2></div><Link className="text-link" href={'/artesas/' + group.artisan.slug}>Ver catálogo ↗</Link></div><ProductCarousel products={group.products} label={'Criações de ' + group.artisan.name} /></section>)}
+
+    <section className="section"><div className="section-head"><div><span className="eyebrow">As mãos por trás da arte</span><h2>Conheça nossas artesãs</h2></div><Link className="text-link" href="/artesas">Ver todas ↗</Link></div>{artisans.length ? <div className="artisan-grid">{artisans.slice(0, 3).map(artisan => <ArtisanCard artisan={artisan} key={artisan.id} />)}</div> : <div className="empty">As artesãs aprovadas aparecerão aqui em breve.</div>}</section>
+
+    <section className="story-band" id="historia"><div><span className="eyebrow">Para quem faz</span><h2>Seu trabalho merece ser visto.</h2><p>É artesã de Xexéu? Crie seu perfil e apresente suas peças. A participação é gratuita por enquanto.</p></div><Link className="button button-outline" href="/cadastro">Criar meu perfil grátis ↗</Link></section>
+  </>;
+}
