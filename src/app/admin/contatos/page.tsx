@@ -1,0 +1,4 @@
+import { redirect } from 'next/navigation';
+import { adminDb,currentUser } from '@/lib/supabase';
+export const dynamic='force-dynamic';
+export default async function Requests(){const user=await currentUser();if(!user)redirect('/entrar');const db=adminDb();const {data:profile}=await db.from('profiles').select('role').eq('id',user.id).maybeSingle();if(profile?.role!=='admin')redirect('/painel');const {data:requests}=await db.from('support_requests').select('*').order('created_at',{ascending:false}).limit(100);return <div className="panel"><span className="eyebrow">Administração</span><h1>Consultas da equipe</h1>{requests?.length?requests.map(r=><div className="card-box" key={r.id}><strong>{r.name}</strong> · <a className="text-link" href={`mailto:${r.email}`}>{r.email}</a> · {new Date(r.created_at).toLocaleString('pt-BR')}<p style={{whiteSpace:'pre-wrap',marginTop:15}}>{r.message}</p></div>):<div className="empty">Nenhuma consulta recebida.</div>}</div>}

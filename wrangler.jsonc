@@ -1,0 +1,16 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "xexeu-das-artes",
+  "main": ".open-next/worker.js",
+  "compatibility_date": "2026-09-24",
+  "compatibility_flags": ["nodejs_compat"],
+  "workers_dev": true,
+  "assets": { "directory": ".open-next/assets", "binding": "ASSETS" },
+  "observability": { "enabled": true },
+  "vars": {
+    "NEXT_PUBLIC_SITE_URL": "https://xexeu-das-artes.domingosfonseca.workers.dev",
+    "NEXT_PUBLIC_SUPABASE_URL": "https://egiilwduitwwmiagqtvo.supabase.co",
+    "NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY": "sb_publishable_O6K8fQbSSPTeD-Xch-RgPw_BE0K9to0",
+    "NEXT_PUBLIC_COMMERCE_ENABLED": "false"
+  }
+}

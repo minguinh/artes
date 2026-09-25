@@ -1,0 +1,9 @@
+node_modules
+.pnpm-store
+.next
+.open-next
+.wrangler
+.env*
+!.env.example
+!.env.production
+*.tsbuildinfo

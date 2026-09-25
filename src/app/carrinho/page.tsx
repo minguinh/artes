@@ -1,0 +1,2 @@
+import Cart from '@/components/cart';
+export default function CartPage(){if(process.env.NEXT_PUBLIC_COMMERCE_ENABLED!=='true')return <div className="panel"><span className="eyebrow">Compras online</span><h1>Em preparação</h1><div className="notice">A vitrine já está disponível. O carrinho será ativado quando pagamentos e entregas estiverem conectados.</div></div>;return <><div className="page-hero"><span className="eyebrow">Sua seleção</span><h1>Meu carrinho</h1><p>Confirme o endereço e escolha a entrega de cada artesã antes de pagar.</p></div><Cart/></>}
