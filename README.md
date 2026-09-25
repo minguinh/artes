@@ -71,11 +71,15 @@ pnpm dev
 pnpm build
 ```
 
-Publique em hospedagem Next.js com Node.js e HTTPS, conecte o domínio e repita as variáveis no ambiente de produção. Atualize a URL do site no Supabase e no Mercado Pago. Este repositório não contém contas, chaves ou fotos reais.
+A publicação usa Cloudflare Workers com OpenNext. O Worker `xexeu-das-artes` está conectado à branch `main` deste repositório. O build executa `pnpm cf:build` e a implantação `pnpm exec wrangler deploy`. O endereço inicial é `https://xexeu-das-artes.domingosfonseca.workers.dev`. As variáveis públicas ficam em `wrangler.jsonc` e `.env.production`; inclua `SUPABASE_SERVICE_ROLE_KEY` somente como segredo do Worker no painel Cloudflare. Nunca grave esse valor no Git. Em Supabase Auth, configure Site URL e Redirect URLs para esse endereço.
+
+## Primeiro lançamento
+
+`NEXT_PUBLIC_COMMERCE_ENABLED=false` mantém carrinho e finalização desativados até a homologação do Mercado Pago Marketplace e das APIs contratadas dos Correios. A navegação, o cadastro, a aprovação e o catálogo usam o Supabase. Para habilitar as ações dos painéis e o formulário de contato, adicione a service role key como segredo `SUPABASE_SERVICE_ROLE_KEY` no Worker. O comprador não deve receber promessa de compra até que os fluxos externos sejam testados.
 
 ## Limites desta entrega
 
-- A migração e os fluxos externos precisam ser exercitados no projeto Supabase e nas contas de homologação reais. Sem essas credenciais, só é possível validar o build e a lógica local.
+- A migração foi aplicada ao projeto Supabase `artesxx`. Os fluxos de pagamentos e Correios dependem de credenciais e homologação reais antes de ativar a compra.
 - O estoque é reservado ao criar o pedido. Se a preferência falhar, o pedido passa a `exception` e o estoque é devolvido. Pedidos aguardando pagamento precisam de rotina operacional de expiração/cancelamento antes de alto volume.
 - A cotação agrupada é uma aproximação da embalagem; ajuste para volumes reais e regras de empacotamento antes de uso comercial amplo.
 - Revisar webhooks de estorno, reembolso e disputa, reconciliação periódica de pagamentos, política de devolução e suporte antes de publicar vendas reais.
@@ -87,3 +91,5 @@ Publique em hospedagem Next.js com Node.js e HTTPS, conecte o domínio e repita 
 - [Mercado Pago: webhooks](https://www.mercadopago.com.br/developers/pt/docs/links-and-debts/additional-content/your-integrations/notifications/webhooks)
 - [Correios: API Preço](https://www.correios.com.br/atendimento/developers/manuais/manual-api-preco-1), [Prazo](https://www.correios.com.br/atendimento/developers/manuais/manual-api-prazo), [Busca CEP](https://www.correios.com.br/atendimento/developers/manuais/manual-api-busca-cep)
 - [Supabase: autenticação no servidor](https://supabase.com/docs/guides/auth/server-side)
+
+
