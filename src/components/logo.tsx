@@ -4,6 +4,8 @@ export default function Logo({ className = '', light = false }: LogoProps) {
   const yarn = light ? '#ffd8e7' : '#c84f83';
   const shadow = light ? '#f8a9c9' : '#8d315b';
   const stitch = light ? '#fff5f8' : '#ffe4ee';
+  const lettering = light ? '#fff5f8' : '#54233f';
+  const letteringEdge = light ? '#a85078' : '#e6a3c0';
 
   return (
     <svg className={className} viewBox="0 0 620 140" role="img" aria-label="Xexéu das Artes, marca em fios de crochê" xmlns="http://www.w3.org/2000/svg">
@@ -15,8 +17,8 @@ export default function Logo({ className = '', light = false }: LogoProps) {
         <path d="M121 125c-4 3-7 3-11 0" stroke={shadow} strokeWidth="3" />
       </g>
       <g fontFamily="'Baloo 2','Arial Rounded MT Bold',sans-serif" fontSize="72" fontWeight="700" letterSpacing="-2">
-        <text x="127" y="93" fill={yarn} stroke={shadow} strokeWidth="4" paintOrder="stroke">Xexéu das Artes</text>
-        <text x="127" y="93" fill="none" stroke={stitch} strokeWidth="3" strokeDasharray="1 10" strokeLinecap="round">Xexéu das Artes</text>
+        <text x="127" y="93" fill={lettering} stroke={letteringEdge} strokeWidth="2" paintOrder="stroke">Xexéu das Artes</text>
+        <text x="127" y="93" fill="none" stroke={light ? '#efb6cf' : '#d887aa'} strokeWidth="1" strokeDasharray="1 15" strokeLinecap="round" opacity="0.6">Xexéu das Artes</text>
       </g>
     </svg>
   );

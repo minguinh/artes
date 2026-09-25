@@ -2,7 +2,6 @@ import Link from 'next/link';
 import { Heart, Leaf, UsersRound } from 'lucide-react';
 import { ArtisanCard } from '@/components/catalog';
 import ProductCarousel from '@/components/product-carousel';
-import HomeBagPreview from '@/components/home-bag-preview';
 import { publicArtisans, publicProducts } from '@/lib/catalog';
 import { photoUrl } from '@/lib/types';
 
@@ -14,7 +13,6 @@ export default async function Home() {
   const groups = artisans
     .map(artisan => ({ artisan, products: products.filter(product => product.artisan_id === artisan.id) }))
     .filter(group => group.products.length > 0);
-  const commerceEnabled = process.env.NEXT_PUBLIC_COMMERCE_ENABLED === 'true';
 
   return <>
     <div className="home-scene">
@@ -62,7 +60,6 @@ export default async function Home() {
             {artisans.length > 0 && <section className="home-artisans"><div className="section-head"><div><span className="eyebrow">Quem faz a arte acontecer</span><h2>Conheça nossas artesãs</h2></div><Link className="text-link" href="/artesas">Ver todas ↗</Link></div><div className="artisan-grid">{artisans.slice(0, 3).map(artisan => <ArtisanCard artisan={artisan} key={artisan.id} />)}</div></section>}
           </div>
         </div>
-        <HomeBagPreview commerceEnabled={commerceEnabled} />
       </div>
     </div>
     <section className="story-band" id="historia"><div><span className="eyebrow">Para quem faz</span><h2>Seu trabalho merece ser visto.</h2><p>É artesã de Xexéu? Crie seu perfil e apresente suas peças. A participação é gratuita por enquanto.</p></div><Link className="button button-outline" href="/cadastro">Criar meu perfil grátis ↗</Link></section>
