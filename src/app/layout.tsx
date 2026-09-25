@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { ShoppingBag, UserRound } from 'lucide-react';
+import { Search, ShoppingBag, UserRound } from 'lucide-react';
 import Logo from '@/components/logo';
 import './globals.css';
 
@@ -15,14 +15,19 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <header className="site-header">
       <Link href="/" className="brand" aria-label="Xexéu das Artes, página inicial"><Logo className="logo-header" /></Link>
       <nav aria-label="Navegação principal">
-        <Link href="/artesas">As artesãs</Link>
-        <Link href="/produtos">Peças</Link>
-        <Link href="/#historia">Nossa essência</Link>
+        <Link href="/">Início</Link>
+        <Link href="/artesas">Artesãs</Link>
+        <Link href="/produtos">Produtos</Link>
+        <Link href="/#historia">Sobre</Link>
       </nav>
+      <form action="/produtos" method="get" className="header-search" role="search">
+        <input name="busca" type="search" placeholder="Buscar produtos, artesãs..." aria-label="Buscar produtos e artesãs" />
+        <button type="submit" aria-label="Buscar"><Search size={19} strokeWidth={1.8}/></button>
+      </form>
       <div className="header-actions">
-        <Link href="/painel" aria-label="Minha conta"><UserRound size={20}/></Link>
-        <Link href="/carrinho" aria-label="Carrinho"><ShoppingBag size={20}/></Link>
-        <Link href="/cadastro" className="button button-small">Sou artesã</Link>
+        <Link href="/produtos" className="mobile-search" aria-label="Buscar produtos"><Search size={21}/></Link>
+        <Link href="/carrinho" aria-label="Carrinho"><ShoppingBag size={21}/></Link>
+        <Link href="/painel" aria-label="Minha conta"><UserRound size={21}/></Link>
       </div>
     </header>
     <main>{children}</main>
@@ -37,4 +42,3 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     </footer>
   </body></html>;
 }
-
