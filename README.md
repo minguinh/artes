@@ -38,6 +38,8 @@ As tabelas expostas têm RLS. As rotas do servidor verificam a identidade e a pr
 5. O comprador recebe um link de pagamento para cada artesã. Pix e cartões aparecem conforme disponibilidade da conta conectada e do Checkout Pro. Nenhum dado de cartão passa pelo aplicativo.
 6. O webhook autenticado consulta o pagamento na API do Mercado Pago e confere pedido, valor e conta recebedora. Só então o pedido muda para `paid`. O retorno do navegador nunca marca pagamento.
 
+Guia de ativação para este projeto: [pagamentos e frete](docs/ativar-pagamentos-e-frete.md).
+
 ## Preparar as contas
 
 ### Supabase

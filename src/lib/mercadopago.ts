@@ -1,5 +1,14 @@
 import { createCipheriv,createDecipheriv,randomBytes } from 'node:crypto';
 import { adminDb } from './supabase';
+
+export function marketplaceConnectionReady() {
+  return Boolean(
+    process.env.NEXT_PUBLIC_SITE_URL &&
+    process.env.MERCADO_PAGO_CLIENT_ID &&
+    process.env.MERCADO_PAGO_CLIENT_SECRET &&
+    /^[a-f0-9]{64}$/i.test(process.env.TOKEN_ENCRYPTION_KEY || '')
+  );
+}
 function key(){const raw=process.env.TOKEN_ENCRYPTION_KEY;if(!raw||!/^[a-f0-9]{64}$/i.test(raw))throw new Error('TOKEN_ENCRYPTION_KEY deve ter 32 bytes em hexadecimal');return Buffer.from(raw,'hex')}
 export function encrypt(value:string){const iv=randomBytes(12);const cipher=createCipheriv('aes-256-gcm',key(),iv);const payload=Buffer.concat([cipher.update(value,'utf8'),cipher.final()]);return `${iv.toString('hex')}:${cipher.getAuthTag().toString('hex')}:${payload.toString('hex')}`}
 export function decrypt(value:string){const [iv,tag,payload]=value.split(':');const decipher=createDecipheriv('aes-256-gcm',key(),Buffer.from(iv,'hex'));decipher.setAuthTag(Buffer.from(tag,'hex'));return Buffer.concat([decipher.update(Buffer.from(payload,'hex')),decipher.final()]).toString('utf8')}
