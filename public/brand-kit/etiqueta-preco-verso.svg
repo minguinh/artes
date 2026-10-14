@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="600" height="900" viewBox="0 0 600 900" role="img">
+  <rect width="600" height="900" rx="45" fill="#fff0f5"/>
+  <rect x="20" y="20" width="560" height="860" rx="32" fill="none" stroke="#eaa0bf" stroke-width="4" stroke-dasharray="4 13"/>
+  <circle cx="300" cy="54" r="14" fill="#fff" stroke="#c84f83" stroke-width="3"/>
+  <g transform="translate(300 253) scale(3)" fill="#c84f83" opacity=".55"><circle cx="0" cy="-10" r="7"/><circle cx="9" cy="-3" r="7"/><circle cx="6" cy="8" r="7"/><circle cx="-6" cy="8" r="7"/><circle cx="-9" cy="-3" r="7"/><circle r="5" fill="#fffbf7"/></g>
+  <text x="300" y="385" text-anchor="middle" font-family="'Trebuchet MS','Arial Rounded MT Bold',Arial,sans-serif" font-size="52" font-weight="700" fill="#51263d">Esta peça tem</text>
+  <text x="300" y="450" text-anchor="middle" font-family="'Trebuchet MS','Arial Rounded MT Bold',Arial,sans-serif" font-size="52" font-weight="700" fill="#51263d">uma história.</text>
+  <text x="300" y="545" text-anchor="middle" font-family="'Trebuchet MS','Arial Rounded MT Bold',Arial,sans-serif" font-size="28" fill="#51263d">Conheça quem a criou em</text>
+  <text x="300" y="605" text-anchor="middle" font-family="'Trebuchet MS','Arial Rounded MT Bold',Arial,sans-serif" font-size="27" font-weight="700" fill="#8d315b">xexeu-das-artes</text>
+  <text x="300" y="642" text-anchor="middle" font-family="'Trebuchet MS','Arial Rounded MT Bold',Arial,sans-serif" font-size="21" font-weight="700" fill="#8d315b">.domingosfonseca.workers.dev</text>
+  <path d="M68 720H532" fill="none" stroke="#eaa0bf" stroke-width="2" stroke-linecap="round" stroke-dasharray="1 12"/>
+  <text x="300" y="780" text-anchor="middle" font-family="'Trebuchet MS','Arial Rounded MT Bold',Arial,sans-serif" font-size="24" letter-spacing="3" fill="#c84f83">XEXÉU · PERNAMBUCO</text>
+</svg>

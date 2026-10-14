@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1080" height="1920" viewBox="0 0 1080 1920" role="img">
+  <rect width="1080" height="1920" fill="#fff0f5"/>
+  <rect x="32" y="32" width="1016" height="1856" rx="54" fill="#fffbf7"/>
+  <g transform="translate(104 100) scale(1.38)">
+  <circle cx="67" cy="71" r="43" fill="#c84f83" stroke="#8d315b" stroke-width="5"/>
+  <g fill="none" stroke="#ffe4ee" stroke-width="5" stroke-linecap="round"><path d="M32 61c24-21 55-19 76 2M27 78c26-16 59-12 81 5M42 37c9 19 30 31 61 34M38 99c18-11 40-10 57 0M78 31c-17 22-23 47-14 82M97 43C77 66 76 85 84 108"/></g>
+  <path d="M105 96c16 3 25 15 18 29" fill="none" stroke="#c84f83" stroke-width="6" stroke-linecap="round"/>
+  <text x="127" y="93" font-family="'Baloo 2','Arial Rounded MT Bold','Trebuchet MS','Arial Rounded MT Bold',Arial,sans-serif" font-size="72" font-weight="700" letter-spacing="-2" fill="#54233f" stroke="#e6a3c0" stroke-width="2" paint-order="stroke">Xexéu das Artes</text>
+  <text x="127" y="93" font-family="'Baloo 2','Arial Rounded MT Bold','Trebuchet MS','Arial Rounded MT Bold',Arial,sans-serif" font-size="72" font-weight="700" letter-spacing="-2" fill="none" stroke="#d887aa" stroke-width="1" stroke-dasharray="1 15" stroke-linecap="round" opacity=".6">Xexéu das Artes</text>
+</g>
+  <text x="90" y="480" font-family="'Trebuchet MS','Arial Rounded MT Bold',Arial,sans-serif" font-size="79" font-weight="700" fill="#51263d">Arte feita por</text>
+  <text x="90" y="575" font-family="'Trebuchet MS','Arial Rounded MT Bold',Arial,sans-serif" font-size="79" font-weight="700" fill="#51263d">mãos xexeuenses.</text>
+  <text x="93" y="650" font-family="'Trebuchet MS','Arial Rounded MT Bold',Arial,sans-serif" font-size="29" fill="#8d315b">Histórias e peças feitas com afeto.</text>
+  <defs><clipPath id="s"><circle cx="540" cy="1150" r="422"/></clipPath></defs>
+  <circle cx="540" cy="1150" r="442" fill="#e9a2c1"/>
+  <image x="115" y="615" width="850" height="1275" href="mascote-para-banners.png" xlink:href="mascote-para-banners.png" clip-path="url(#s)" preserveAspectRatio="xMidYMin slice"/>
+  <rect x="118" y="1692" width="844" height="104" rx="52" fill="#c84f83"/>
+  <text x="540" y="1760" text-anchor="middle" font-family="'Trebuchet MS','Arial Rounded MT Bold',Arial,sans-serif" font-size="38" font-weight="700" fill="white">Conheça as artesãs</text>
+</svg>

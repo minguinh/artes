@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="600" height="900" viewBox="0 0 600 900" role="img">
+  <rect width="600" height="900" rx="45" fill="#fffbf7"/>
+  <rect x="20" y="20" width="560" height="860" rx="32" fill="none" stroke="#eaa0bf" stroke-width="4" stroke-dasharray="4 13"/>
+  <circle cx="300" cy="54" r="14" fill="#fff" stroke="#c84f83" stroke-width="3"/>
+  <g transform="translate(54 95) scale(0.7)">
+  <circle cx="67" cy="71" r="43" fill="#c84f83" stroke="#8d315b" stroke-width="5"/>
+  <g fill="none" stroke="#ffe4ee" stroke-width="5" stroke-linecap="round"><path d="M32 61c24-21 55-19 76 2M27 78c26-16 59-12 81 5M42 37c9 19 30 31 61 34M38 99c18-11 40-10 57 0M78 31c-17 22-23 47-14 82M97 43C77 66 76 85 84 108"/></g>
+  <path d="M105 96c16 3 25 15 18 29" fill="none" stroke="#c84f83" stroke-width="6" stroke-linecap="round"/>
+  <text x="127" y="93" font-family="'Baloo 2','Arial Rounded MT Bold','Trebuchet MS','Arial Rounded MT Bold',Arial,sans-serif" font-size="72" font-weight="700" letter-spacing="-2" fill="#54233f" stroke="#e6a3c0" stroke-width="2" paint-order="stroke">Xexéu das Artes</text>
+  <text x="127" y="93" font-family="'Baloo 2','Arial Rounded MT Bold','Trebuchet MS','Arial Rounded MT Bold',Arial,sans-serif" font-size="72" font-weight="700" letter-spacing="-2" fill="none" stroke="#d887aa" stroke-width="1" stroke-dasharray="1 15" stroke-linecap="round" opacity=".6">Xexéu das Artes</text>
+</g>
+  <path d="M65 260H535" fill="none" stroke="#eaa0bf" stroke-width="2" stroke-linecap="round" stroke-dasharray="1 12"/>
+  <text x="65" y="325" font-family="'Trebuchet MS','Arial Rounded MT Bold',Arial,sans-serif" font-size="26" font-weight="700" letter-spacing="4" fill="#c84f83">FEITO À MÃO EM XEXÉU</text>
+  <text x="65" y="410" font-family="'Trebuchet MS','Arial Rounded MT Bold',Arial,sans-serif" font-size="28" fill="#51263d">Peça</text>
+  <path d="M65 462H535" stroke="#eaa0bf" stroke-width="3"/>
+  <text x="65" y="536" font-family="'Trebuchet MS','Arial Rounded MT Bold',Arial,sans-serif" font-size="28" fill="#51263d">Artesã</text>
+  <path d="M65 588H535" stroke="#eaa0bf" stroke-width="3"/>
+  <text x="65" y="677" font-family="'Trebuchet MS','Arial Rounded MT Bold',Arial,sans-serif" font-size="28" fill="#51263d">Preço</text>
+  <text x="65" y="770" font-family="'Trebuchet MS','Arial Rounded MT Bold',Arial,sans-serif" font-size="66" font-weight="700" fill="#51263d">R$ ______</text>
+  <g transform="translate(516 807) scale(1.4)" fill="#c84f83" opacity=".55"><circle cx="0" cy="-10" r="7"/><circle cx="9" cy="-3" r="7"/><circle cx="6" cy="8" r="7"/><circle cx="-6" cy="8" r="7"/><circle cx="-9" cy="-3" r="7"/><circle r="5" fill="#fffbf7"/></g>
+</svg>
