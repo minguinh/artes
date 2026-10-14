@@ -6,14 +6,14 @@ Escreva sempre **Xexéu das Artes**, com acento. O projeto apresenta as artesãs
 
 ## Marca e cores
 
-- Logotipo: letras arredondadas com aparência de fios e pequenos pontos de crochê, acompanhadas de um novelo. Arquivo: public/images/logo-xexeu-das-artes.svg.
+- Logotipo: novelo rosa em relevo, fio formando um coração e letras serifadas em ameixa. A marca foi isolada e vetorizada a partir da arte `public/social/xexeu-das-artes-feed-em-breve.png`, escolhida pelo responsável do projeto como referência. Arquivo vetorial independente: `public/images/logo-xexeu-das-artes.svg`.
 - Rosa principal: #c84f83.
 - Rosa claro: #fff0f5.
 - Ameixa escura: #51263d.
 - Fundo: #fffbfd.
 - Rosa de apoio: #eaa0bf.
 
-Use a marca sobre fundos claros. Na navegação e no rodapé, a versão é renderizada pelo componente src/components/logo.tsx.
+Use a marca sobre fundos claros. Na navegação e no rodapé, o componente `src/components/logo.tsx` exibe o mesmo SVG; no rodapé há uma placa clara para manter o contraste. A bandeira de Xexéu aparece separada da logomarca nas peças do kit de identidade visual.
 
 ## Mascote
 

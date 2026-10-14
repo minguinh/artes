@@ -16,7 +16,7 @@ Use o texto ameixa sobre fundo creme ou rosa claro para manter a leitura. Reserv
 
 ## Arquivos
 
-- `logo-principal.svg` e `.png`: logomarca original rosa, preservada sem redesenho (o SVG apenas amplia a área de visualização para não cortar a última letra).
+- `logo-principal.svg` e `.png`: logomarca do cartaz escolhido pelo responsável, com novelo rosa, fio em coração e letras serifadas em ameixa. O SVG foi vetorizado em caminhos independentes da imagem raster.
 - `assinatura-com-bandeira.svg` e `.png`: logomarca original acompanhada da bandeira de Xexéu em uma composição separada.
 - `etiqueta-preco-frente.svg` e `.png`: etiqueta de 60 × 90 mm; preencha peça, artesã e preço antes de imprimir.
 - `etiqueta-preco-verso.svg` e `.png`: verso da etiqueta, também 60 × 90 mm.
@@ -32,4 +32,4 @@ Os PNGs são prontos para uso. Os SVGs permitem edição de texto, tamanho e cor
 
 Não preencha com valores ilustrativos apresentados em referências antigas. O preço deve corresponder à peça da artesã responsável.
 
-Para regenerar os SVGs e PNGs no projeto, execute `node scripts/generate-brand-kit.mjs`.
+Para refazer a vetorização a partir da arte original, execute `python scripts/vectorize-logo.py` (requer Pillow e vtracer). Depois, para regenerar os SVGs e PNGs do kit, execute `node scripts/generate-brand-kit.mjs`.
