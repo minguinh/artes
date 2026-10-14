@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="600" height="600" viewBox="0 0 600 600" role="img">
   <circle cx="300" cy="300" r="293" fill="#c84f83"/>
   <circle cx="300" cy="300" r="267" fill="none" stroke="#fff5f8" stroke-width="4" stroke-dasharray="3 14"/>
-  <circle cx="300" cy="235" r="76" fill="#ffd8e7" stroke="#8d315b" stroke-width="5"/>
-  <path d="M245 230c38-27 79-22 113 7M240 261c45-18 92-13 119 16M294 163c-34 55-29 105-3 146" fill="none" stroke="white" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="300" cy="235" r="78" fill="#fffbf7" stroke="#8d315b" stroke-width="4"/>
+  <g><rect x="242" y="190" width="116" height="85" rx="8" fill="white" stroke="#eaa0bf" stroke-width="2"/><image x="247" y="195" width="106" height="75" href="bandeira-xexeu.png" xlink:href="bandeira-xexeu.png" preserveAspectRatio="xMidYMid meet"/></g>
   <text x="300" y="386" text-anchor="middle" font-family="'Trebuchet MS','Arial Rounded MT Bold',Arial,sans-serif" font-size="52" font-weight="700" fill="white">Feito com afeto</text>
   <text x="300" y="436" text-anchor="middle" font-family="'Trebuchet MS','Arial Rounded MT Bold',Arial,sans-serif" font-size="29" fill="white">em Xexéu · PE</text>
 </svg>

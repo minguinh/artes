@@ -16,8 +16,8 @@ Use o texto ameixa sobre fundo creme ou rosa claro para manter a leitura. Reserv
 
 ## Arquivos
 
-- `logo-principal.svg` e `.png`: marca para fundos claros.
-- `logo-clara.svg` e `.png`: marca para fundos escuros. A versão clara tem letras brancas; ela precisa de fundo colorido.
+- `logo-principal.svg` e `.png`: logomarca original rosa, preservada sem redesenho (o SVG apenas amplia a área de visualização para não cortar a última letra).
+- `assinatura-com-bandeira.svg` e `.png`: logomarca original acompanhada da bandeira de Xexéu em uma composição separada.
 - `etiqueta-preco-frente.svg` e `.png`: etiqueta de 60 × 90 mm; preencha peça, artesã e preço antes de imprimir.
 - `etiqueta-preco-verso.svg` e `.png`: verso da etiqueta, também 60 × 90 mm.
 - `cartao-agradecimento.svg` e `.png`: cartão de 105 × 60 mm.
@@ -26,8 +26,9 @@ Use o texto ameixa sobre fundo creme ou rosa claro para manter a leitura. Reserv
 - `post-quadrado.svg` e `.png`: arte para feed de 1080 × 1080 px.
 - `story-vertical.svg` e `.png`: banner vertical para stories de 1080 × 1920 px.
 - `mascote-para-banners.png`: ilustração usada nos banners. Os SVGs dos banners fazem referência a esse arquivo na mesma pasta; mantenha-os juntos ou use os PNGs prontos.
+- `bandeira-xexeu.png`: bandeira municipal apresentada nas peças do kit. Fonte: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Bandeira_de_Xex%C3%A9u.png), arquivo atribuído à Prefeitura Municipal de Xexéu e disponibilizado sob [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). Mantida sem redesenho.
 
-Os PNGs são prontos para uso. Os SVGs permitem edição de texto, tamanho e cor em um editor vetorial. Para impressão profissional, peça à gráfica uma prova de cor e converta as fontes em curvas depois de personalizar os dados. A etiqueta tem um furo indicado no topo; confirme com a gráfica a margem de corte e o tipo de papel.
+Os PNGs são prontos para uso. Os SVGs permitem edição de texto, tamanho e cor em um editor vetorial. Para impressão profissional, peça à gráfica uma prova de cor e converta as fontes em curvas depois de personalizar os dados. A etiqueta tem um furo indicado no topo; confirme com a gráfica a margem de corte e o tipo de papel. Mantenha as imagens da mascote e da bandeira na mesma pasta dos SVGs que as utilizam.
 
 Não preencha com valores ilustrativos apresentados em referências antigas. O preço deve corresponder à peça da artesã responsável.
 
