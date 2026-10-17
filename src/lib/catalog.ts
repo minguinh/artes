@@ -15,3 +15,12 @@ export async function publicArtisans():Promise<Artisan[]> {
   return (data||[]) as Artisan[];
 }
 
+export async function availablePublicCatalog<T>(load: () => Promise<T>): Promise<T | null> {
+  try {
+    return await load();
+  } catch (error) {
+    console.error('Catálogo público indisponível:', error);
+    return null;
+  }
+}
+

@@ -2,13 +2,20 @@ import Link from 'next/link';
 import { Heart, Leaf, UsersRound } from 'lucide-react';
 import { ArtisanCard } from '@/components/catalog';
 import ProductCarousel from '@/components/product-carousel';
-import { publicArtisans, publicProducts } from '@/lib/catalog';
+import { CatalogUnavailable } from '@/components/catalog-unavailable';
+import { availablePublicCatalog, publicArtisans, publicProducts } from '@/lib/catalog';
 import { photoUrl } from '@/lib/types';
 
 export const dynamic = 'force-dynamic';
 
 export default async function Home() {
-  const [artisans, products] = await Promise.all([publicArtisans(), publicProducts()]);
+  const [loadedArtisans, loadedProducts] = await Promise.all([
+    availablePublicCatalog(publicArtisans),
+    availablePublicCatalog(publicProducts),
+  ]);
+  const unavailable = loadedArtisans === null || loadedProducts === null;
+  const artisans = loadedArtisans ?? [];
+  const products = loadedProducts ?? [];
   const featured = artisans.find(artisan => artisan.featured_month === new Date().toISOString().slice(0, 7) + '-01');
   const groups = artisans
     .map(artisan => ({ artisan, products: products.filter(product => product.artisan_id === artisan.id) }))
@@ -48,8 +55,9 @@ export default async function Home() {
           </section>
 
           <div className="home-content">
+            {unavailable && <CatalogUnavailable />}
             <div className="home-intro-line"><span>Peças com história</span><p>Feitas por mãos de Xexéu, apresentadas por quem cria.</p></div>
-            {groups.length ? groups.map(group => <section className="home-products" key={group.artisan.id}>
+            {unavailable ? null : groups.length ? groups.map(group => <section className="home-products" key={group.artisan.id}>
               <div className="section-head"><div><span className="eyebrow">Criações de {group.artisan.name}</span><h2>Peças de {group.artisan.name}</h2></div><Link className="text-link" href={'/artesas/' + group.artisan.slug}>Conhecer a artesã ↗</Link></div>
               <ProductCarousel products={group.products} label={'Peças de ' + group.artisan.name} />
             </section>) : <section className="home-products home-products-empty">
